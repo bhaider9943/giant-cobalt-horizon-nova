@@ -1,14 +1,14 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
 import { v as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
-import { a as Plus, c as Earth, i as RotateCcw, o as Minus, r as Search, s as List, t as X } from "../_libs/lucide-react.mjs";
+import { a as RotateCcw, c as List, i as Search, l as Earth, n as Upload, o as Plus, s as Minus, t as X, u as Download } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as Slot } from "../_libs/radix-ui__react-slot.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { n as create, t as persist } from "../_libs/zustand.mjs";
 import { t as feature_default } from "../_libs/topojson-client.mjs";
 import { n as path_default, t as naturalEarth1_default } from "../_libs/d3-geo.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BZHFbfWw.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CozNahH6.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function cn(...inputs) {
@@ -47,14 +47,6 @@ function Button({ className, variant, size, asChild, ...props }) {
 			size,
 			className
 		})),
-		...props
-	});
-}
-function Input({ className, type, ...props }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-		type,
-		"data-slot": "input",
-		className: cn("h-11 w-full min-w-0 rounded-md bg-surface-2 px-3 text-sm text-fg outline-none", "shadow-[var(--shadow-border)] placeholder:text-subtle", "focus-visible:ring-2 focus-visible:ring-ring/70 focus-visible:ring-offset-2 focus-visible:ring-offset-bg", "disabled:cursor-not-allowed disabled:opacity-40", className),
 		...props
 	});
 }
@@ -175,27 +167,6 @@ function countriesWithClients(counts) {
 	for (const v of Object.values(counts)) if (v > 0) n += 1;
 	return n;
 }
-var useClientsStore = create()(persist((set, get) => ({
-	counts: { ...DEFAULT_COUNTS },
-	selectedId: null,
-	hoveredId: null,
-	setHovered: (id) => set({ hoveredId: id }),
-	setSelected: (id) => set({
-		selectedId: id,
-		hoveredId: null
-	}),
-	setCount: (id, n) => {
-		const next = Math.max(0, Math.min(99999, Math.round(n)));
-		set({ counts: {
-			...get().counts,
-			[id]: next
-		} });
-	},
-	reset: () => set({ counts: { ...DEFAULT_COUNTS } })
-}), {
-	name: "client-atlas-v1",
-	partialize: (s) => ({ counts: s.counts })
-}));
 var topo = {
 	type: "Topology",
 	objects: /* @__PURE__ */ JSON.parse("{\"countries\":{\"type\":\"GeometryCollection\",\"geometries\":[{\"type\":\"MultiPolygon\",\"arcs\":[[[0]],[[1]]],\"id\":\"242\",\"properties\":{\"name\":\"Fiji\"}},{\"type\":\"Polygon\",\"arcs\":[[2,3,4,5,6,7,8,9,10]],\"id\":\"834\",\"properties\":{\"name\":\"Tanzania\"}},{\"type\":\"Polygon\",\"arcs\":[[11,12,13,14]],\"id\":\"732\",\"properties\":{\"name\":\"W. Sahara\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[15,16,17,18]],[[19]],[[20]],[[21]],[[22]],[[23]],[[24]],[[25]],[[26]],[[27]],[[28]],[[29]],[[30]],[[31]],[[32]],[[33]],[[34]],[[35]],[[36]],[[37]],[[38]],[[39]],[[40]],[[41]],[[42]],[[43]],[[44]],[[45]],[[46]],[[47]]],\"id\":\"124\",\"properties\":{\"name\":\"Canada\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-19,48,49,50]],[[51]],[[52]],[[53]],[[54]],[[55]],[[56]],[[57]],[[-17,58]],[[59]]],\"id\":\"840\",\"properties\":{\"name\":\"United States of America\"}},{\"type\":\"Polygon\",\"arcs\":[[60,61,62,63,64,65]],\"id\":\"398\",\"properties\":{\"name\":\"Kazakhstan\"}},{\"type\":\"Polygon\",\"arcs\":[[-63,66,67,68,69]],\"id\":\"860\",\"properties\":{\"name\":\"Uzbekistan\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[70,71]],[[72]],[[73]],[[74]]],\"id\":\"598\",\"properties\":{\"name\":\"Papua New Guinea\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-72,75]],[[76,77]],[[78]],[[79,80]],[[81]],[[82]],[[83]],[[84]],[[85]],[[86]],[[87]],[[88]],[[89]]],\"id\":\"360\",\"properties\":{\"name\":\"Indonesia\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[90,91]],[[92,93,94,95,96,97]]],\"id\":\"032\",\"properties\":{\"name\":\"Argentina\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-92,98]],[[99,-95,100,101]]],\"id\":\"152\",\"properties\":{\"name\":\"Chile\"}},{\"type\":\"Polygon\",\"arcs\":[[-8,102,103,104,105,106,107,108,109,110,111]],\"id\":\"180\",\"properties\":{\"name\":\"Dem. Rep. Congo\"}},{\"type\":\"Polygon\",\"arcs\":[[112,113,114,115]],\"id\":\"706\",\"properties\":{\"name\":\"Somalia\"}},{\"type\":\"Polygon\",\"arcs\":[[-3,116,117,118,-113,119]],\"id\":\"404\",\"properties\":{\"name\":\"Kenya\"}},{\"type\":\"Polygon\",\"arcs\":[[120,121,122,123,124,125,126,127]],\"id\":\"729\",\"properties\":{\"name\":\"Sudan\"}},{\"type\":\"Polygon\",\"arcs\":[[-122,128,129,130,131]],\"id\":\"148\",\"properties\":{\"name\":\"Chad\"}},{\"type\":\"Polygon\",\"arcs\":[[132,133]],\"id\":\"332\",\"properties\":{\"name\":\"Haiti\"}},{\"type\":\"Polygon\",\"arcs\":[[-133,134]],\"id\":\"214\",\"properties\":{\"name\":\"Dominican Rep.\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[135]],[[136]],[[137]],[[138]],[[139]],[[140]],[[141,142,143]],[[144]],[[145]],[[146,147,148,149,-66,150,151,152,153,154,155,156,157,158,159,160,161]],[[162]],[[163,164]]],\"id\":\"643\",\"properties\":{\"name\":\"Russia\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[165]],[[166]],[[167]]],\"id\":\"044\",\"properties\":{\"name\":\"Bahamas\"}},{\"type\":\"Polygon\",\"arcs\":[[168]],\"id\":\"238\",\"properties\":{\"name\":\"Falkland Is.\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[169]],[[-161,170,171,172]],[[173]],[[174]]],\"id\":\"578\",\"properties\":{\"name\":\"Norway\"}},{\"type\":\"Polygon\",\"arcs\":[[175]],\"id\":\"304\",\"properties\":{\"name\":\"Greenland\"}},{\"type\":\"Polygon\",\"arcs\":[[176]],\"id\":\"260\",\"properties\":{\"name\":\"Fr. S. Antarctic Lands\"}},{\"type\":\"Polygon\",\"arcs\":[[177,-77]],\"id\":\"626\",\"properties\":{\"name\":\"Timor-Leste\"}},{\"type\":\"Polygon\",\"arcs\":[[178,179,180,181,182,183,184],[185]],\"id\":\"710\",\"properties\":{\"name\":\"South Africa\"}},{\"type\":\"Polygon\",\"arcs\":[[-186]],\"id\":\"426\",\"properties\":{\"name\":\"Lesotho\"}},{\"type\":\"Polygon\",\"arcs\":[[-50,186,187,188,189]],\"id\":\"484\",\"properties\":{\"name\":\"Mexico\"}},{\"type\":\"Polygon\",\"arcs\":[[190,191,-93]],\"id\":\"858\",\"properties\":{\"name\":\"Uruguay\"}},{\"type\":\"Polygon\",\"arcs\":[[-191,-98,192,193,194,195,196,197,198,199,200]],\"id\":\"076\",\"properties\":{\"name\":\"Brazil\"}},{\"type\":\"Polygon\",\"arcs\":[[-194,201,-96,-100,202]],\"id\":\"068\",\"properties\":{\"name\":\"Bolivia\"}},{\"type\":\"Polygon\",\"arcs\":[[-195,-203,-102,203,204,205]],\"id\":\"604\",\"properties\":{\"name\":\"Peru\"}},{\"type\":\"Polygon\",\"arcs\":[[-196,-206,206,207,208,209,210]],\"id\":\"170\",\"properties\":{\"name\":\"Colombia\"}},{\"type\":\"Polygon\",\"arcs\":[[-209,211,212,213]],\"id\":\"591\",\"properties\":{\"name\":\"Panama\"}},{\"type\":\"Polygon\",\"arcs\":[[-213,214,215,216]],\"id\":\"188\",\"properties\":{\"name\":\"Costa Rica\"}},{\"type\":\"Polygon\",\"arcs\":[[-216,217,218,219]],\"id\":\"558\",\"properties\":{\"name\":\"Nicaragua\"}},{\"type\":\"Polygon\",\"arcs\":[[-219,220,221,222,223]],\"id\":\"340\",\"properties\":{\"name\":\"Honduras\"}},{\"type\":\"Polygon\",\"arcs\":[[-222,224,225]],\"id\":\"222\",\"properties\":{\"name\":\"El Salvador\"}},{\"type\":\"Polygon\",\"arcs\":[[-189,226,227,-223,-226,228]],\"id\":\"320\",\"properties\":{\"name\":\"Guatemala\"}},{\"type\":\"Polygon\",\"arcs\":[[-188,229,-227]],\"id\":\"084\",\"properties\":{\"name\":\"Belize\"}},{\"type\":\"Polygon\",\"arcs\":[[-197,-211,230,231]],\"id\":\"862\",\"properties\":{\"name\":\"Venezuela\"}},{\"type\":\"Polygon\",\"arcs\":[[-198,-232,232,233]],\"id\":\"328\",\"properties\":{\"name\":\"Guyana\"}},{\"type\":\"Polygon\",\"arcs\":[[-199,-234,234,235]],\"id\":\"740\",\"properties\":{\"name\":\"Suriname\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-200,-236,236]],[[237,238,239,240,241,242,243,244]],[[245]]],\"id\":\"250\",\"properties\":{\"name\":\"France\"}},{\"type\":\"Polygon\",\"arcs\":[[-205,246,-207]],\"id\":\"218\",\"properties\":{\"name\":\"Ecuador\"}},{\"type\":\"Polygon\",\"arcs\":[[247]],\"id\":\"630\",\"properties\":{\"name\":\"Puerto Rico\"}},{\"type\":\"Polygon\",\"arcs\":[[248]],\"id\":\"388\",\"properties\":{\"name\":\"Jamaica\"}},{\"type\":\"Polygon\",\"arcs\":[[249]],\"id\":\"192\",\"properties\":{\"name\":\"Cuba\"}},{\"type\":\"Polygon\",\"arcs\":[[-181,250,251,252]],\"id\":\"716\",\"properties\":{\"name\":\"Zimbabwe\"}},{\"type\":\"Polygon\",\"arcs\":[[-180,253,254,-251]],\"id\":\"072\",\"properties\":{\"name\":\"Botswana\"}},{\"type\":\"Polygon\",\"arcs\":[[-179,255,256,257,-254]],\"id\":\"516\",\"properties\":{\"name\":\"Namibia\"}},{\"type\":\"Polygon\",\"arcs\":[[258,259,260,261,262,263,264]],\"id\":\"686\",\"properties\":{\"name\":\"Senegal\"}},{\"type\":\"Polygon\",\"arcs\":[[-261,265,266,267,268,269,270]],\"id\":\"466\",\"properties\":{\"name\":\"Mali\"}},{\"type\":\"Polygon\",\"arcs\":[[-13,271,-266,-260,272]],\"id\":\"478\",\"properties\":{\"name\":\"Mauritania\"}},{\"type\":\"Polygon\",\"arcs\":[[273,274,275,276,277]],\"id\":\"204\",\"properties\":{\"name\":\"Benin\"}},{\"type\":\"Polygon\",\"arcs\":[[-131,278,279,-277,280,-268,281,282]],\"id\":\"562\",\"properties\":{\"name\":\"Niger\"}},{\"type\":\"Polygon\",\"arcs\":[[-278,-280,283,284]],\"id\":\"566\",\"properties\":{\"name\":\"Nigeria\"}},{\"type\":\"Polygon\",\"arcs\":[[-130,285,286,287,288,289,-284,-279]],\"id\":\"120\",\"properties\":{\"name\":\"Cameroon\"}},{\"type\":\"Polygon\",\"arcs\":[[-275,290,291,292]],\"id\":\"768\",\"properties\":{\"name\":\"Togo\"}},{\"type\":\"Polygon\",\"arcs\":[[-292,293,294,295]],\"id\":\"288\",\"properties\":{\"name\":\"Ghana\"}},{\"type\":\"Polygon\",\"arcs\":[[-270,296,-295,297,298,299]],\"id\":\"384\",\"properties\":{\"name\":\"Côte d'Ivoire\"}},{\"type\":\"Polygon\",\"arcs\":[[-262,-271,-300,300,301,302,303]],\"id\":\"324\",\"properties\":{\"name\":\"Guinea\"}},{\"type\":\"Polygon\",\"arcs\":[[-263,-304,304]],\"id\":\"624\",\"properties\":{\"name\":\"Guinea-Bissau\"}},{\"type\":\"Polygon\",\"arcs\":[[-299,305,306,-301]],\"id\":\"430\",\"properties\":{\"name\":\"Liberia\"}},{\"type\":\"Polygon\",\"arcs\":[[-302,-307,307]],\"id\":\"694\",\"properties\":{\"name\":\"Sierra Leone\"}},{\"type\":\"Polygon\",\"arcs\":[[-269,-281,-276,-293,-296,-297]],\"id\":\"854\",\"properties\":{\"name\":\"Burkina Faso\"}},{\"type\":\"Polygon\",\"arcs\":[[-108,308,-286,-129,-121,309]],\"id\":\"140\",\"properties\":{\"name\":\"Central African Rep.\"}},{\"type\":\"Polygon\",\"arcs\":[[-107,310,311,312,-287,-309]],\"id\":\"178\",\"properties\":{\"name\":\"Congo\"}},{\"type\":\"Polygon\",\"arcs\":[[-288,-313,313,314]],\"id\":\"266\",\"properties\":{\"name\":\"Gabon\"}},{\"type\":\"Polygon\",\"arcs\":[[-289,-315,315]],\"id\":\"226\",\"properties\":{\"name\":\"Eq. Guinea\"}},{\"type\":\"Polygon\",\"arcs\":[[-7,316,317,-252,-255,-258,318,-103]],\"id\":\"894\",\"properties\":{\"name\":\"Zambia\"}},{\"type\":\"Polygon\",\"arcs\":[[-6,319,-317]],\"id\":\"454\",\"properties\":{\"name\":\"Malawi\"}},{\"type\":\"Polygon\",\"arcs\":[[-5,320,-184,321,-182,-253,-318,-320]],\"id\":\"508\",\"properties\":{\"name\":\"Mozambique\"}},{\"type\":\"Polygon\",\"arcs\":[[-183,-322]],\"id\":\"748\",\"properties\":{\"name\":\"eSwatini\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-106,322,-311]],[[-104,-319,-257,323]]],\"id\":\"024\",\"properties\":{\"name\":\"Angola\"}},{\"type\":\"Polygon\",\"arcs\":[[-9,-112,324]],\"id\":\"108\",\"properties\":{\"name\":\"Burundi\"}},{\"type\":\"Polygon\",\"arcs\":[[325,326,327,328,329,330,331]],\"id\":\"376\",\"properties\":{\"name\":\"Israel\"}},{\"type\":\"Polygon\",\"arcs\":[[-331,332,333]],\"id\":\"422\",\"properties\":{\"name\":\"Lebanon\"}},{\"type\":\"Polygon\",\"arcs\":[[334]],\"id\":\"450\",\"properties\":{\"name\":\"Madagascar\"}},{\"type\":\"Polygon\",\"arcs\":[[-327,335]],\"id\":\"275\",\"properties\":{\"name\":\"Palestine\"}},{\"type\":\"Polygon\",\"arcs\":[[-265,336]],\"id\":\"270\",\"properties\":{\"name\":\"Gambia\"}},{\"type\":\"Polygon\",\"arcs\":[[337,338,339]],\"id\":\"788\",\"properties\":{\"name\":\"Tunisia\"}},{\"type\":\"Polygon\",\"arcs\":[[-12,340,341,-338,342,-282,-267,-272]],\"id\":\"012\",\"properties\":{\"name\":\"Algeria\"}},{\"type\":\"Polygon\",\"arcs\":[[-326,343,344,345,346,-328,-336]],\"id\":\"400\",\"properties\":{\"name\":\"Jordan\"}},{\"type\":\"Polygon\",\"arcs\":[[347,348,349,350,351]],\"id\":\"784\",\"properties\":{\"name\":\"United Arab Emirates\"}},{\"type\":\"Polygon\",\"arcs\":[[352,353]],\"id\":\"634\",\"properties\":{\"name\":\"Qatar\"}},{\"type\":\"Polygon\",\"arcs\":[[354,355,356]],\"id\":\"414\",\"properties\":{\"name\":\"Kuwait\"}},{\"type\":\"Polygon\",\"arcs\":[[-345,357,358,359,360,-357,361]],\"id\":\"368\",\"properties\":{\"name\":\"Iraq\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-351,362,363,364]],[[-349,365]]],\"id\":\"512\",\"properties\":{\"name\":\"Oman\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[366]],[[367]]],\"id\":\"548\",\"properties\":{\"name\":\"Vanuatu\"}},{\"type\":\"Polygon\",\"arcs\":[[368,369,370,371]],\"id\":\"116\",\"properties\":{\"name\":\"Cambodia\"}},{\"type\":\"Polygon\",\"arcs\":[[-369,372,373,374,375,376]],\"id\":\"764\",\"properties\":{\"name\":\"Thailand\"}},{\"type\":\"Polygon\",\"arcs\":[[-370,-377,377,378,379]],\"id\":\"418\",\"properties\":{\"name\":\"Laos\"}},{\"type\":\"Polygon\",\"arcs\":[[-376,380,381,382,383,-378]],\"id\":\"104\",\"properties\":{\"name\":\"Myanmar\"}},{\"type\":\"Polygon\",\"arcs\":[[-371,-380,384,385]],\"id\":\"704\",\"properties\":{\"name\":\"Vietnam\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[386,386,386]],[[-147,387,388,389,390]]],\"id\":\"408\",\"properties\":{\"name\":\"North Korea\"}},{\"type\":\"Polygon\",\"arcs\":[[-389,391]],\"id\":\"410\",\"properties\":{\"name\":\"South Korea\"}},{\"type\":\"Polygon\",\"arcs\":[[-149,392]],\"id\":\"496\",\"properties\":{\"name\":\"Mongolia\"}},{\"type\":\"Polygon\",\"arcs\":[[-383,393,394,395,396,397,398,399,400]],\"id\":\"356\",\"properties\":{\"name\":\"India\"}},{\"type\":\"Polygon\",\"arcs\":[[-382,401,-394]],\"id\":\"050\",\"properties\":{\"name\":\"Bangladesh\"}},{\"type\":\"Polygon\",\"arcs\":[[-400,402]],\"id\":\"064\",\"properties\":{\"name\":\"Bhutan\"}},{\"type\":\"Polygon\",\"arcs\":[[-398,403]],\"id\":\"524\",\"properties\":{\"name\":\"Nepal\"}},{\"type\":\"Polygon\",\"arcs\":[[-396,404,405,406,407]],\"id\":\"586\",\"properties\":{\"name\":\"Pakistan\"}},{\"type\":\"Polygon\",\"arcs\":[[-69,408,409,-407,410,411]],\"id\":\"004\",\"properties\":{\"name\":\"Afghanistan\"}},{\"type\":\"Polygon\",\"arcs\":[[-68,412,413,-409]],\"id\":\"762\",\"properties\":{\"name\":\"Tajikistan\"}},{\"type\":\"Polygon\",\"arcs\":[[-62,414,-413,-67]],\"id\":\"417\",\"properties\":{\"name\":\"Kyrgyzstan\"}},{\"type\":\"Polygon\",\"arcs\":[[-64,-70,-412,415,416]],\"id\":\"795\",\"properties\":{\"name\":\"Turkmenistan\"}},{\"type\":\"Polygon\",\"arcs\":[[-360,417,418,419,420,421,-416,-411,-406,422]],\"id\":\"364\",\"properties\":{\"name\":\"Iran\"}},{\"type\":\"Polygon\",\"arcs\":[[-332,-334,423,424,-358,-344]],\"id\":\"760\",\"properties\":{\"name\":\"Syria\"}},{\"type\":\"Polygon\",\"arcs\":[[-420,425,426,427,428]],\"id\":\"051\",\"properties\":{\"name\":\"Armenia\"}},{\"type\":\"Polygon\",\"arcs\":[[-172,429,430]],\"id\":\"752\",\"properties\":{\"name\":\"Sweden\"}},{\"type\":\"Polygon\",\"arcs\":[[-156,431,432,433,434]],\"id\":\"112\",\"properties\":{\"name\":\"Belarus\"}},{\"type\":\"Polygon\",\"arcs\":[[-155,435,-164,436,437,438,439,440,441,442,-432]],\"id\":\"804\",\"properties\":{\"name\":\"Ukraine\"}},{\"type\":\"Polygon\",\"arcs\":[[-433,-443,443,444,445,446,-142,447]],\"id\":\"616\",\"properties\":{\"name\":\"Poland\"}},{\"type\":\"Polygon\",\"arcs\":[[448,449,450,451,452,453,454]],\"id\":\"040\",\"properties\":{\"name\":\"Austria\"}},{\"type\":\"Polygon\",\"arcs\":[[-441,455,456,457,458,-449,459]],\"id\":\"348\",\"properties\":{\"name\":\"Hungary\"}},{\"type\":\"Polygon\",\"arcs\":[[-439,460]],\"id\":\"498\",\"properties\":{\"name\":\"Moldova\"}},{\"type\":\"Polygon\",\"arcs\":[[-438,461,462,463,-456,-440,-461]],\"id\":\"642\",\"properties\":{\"name\":\"Romania\"}},{\"type\":\"Polygon\",\"arcs\":[[-434,-448,-144,464,465]],\"id\":\"440\",\"properties\":{\"name\":\"Lithuania\"}},{\"type\":\"Polygon\",\"arcs\":[[-157,-435,-466,466,467]],\"id\":\"428\",\"properties\":{\"name\":\"Latvia\"}},{\"type\":\"Polygon\",\"arcs\":[[-158,-468,468]],\"id\":\"233\",\"properties\":{\"name\":\"Estonia\"}},{\"type\":\"Polygon\",\"arcs\":[[-446,469,-453,470,-238,471,472,473,474,475,476]],\"id\":\"276\",\"properties\":{\"name\":\"Germany\"}},{\"type\":\"Polygon\",\"arcs\":[[-463,477,478,479,480,481]],\"id\":\"100\",\"properties\":{\"name\":\"Bulgaria\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[482]],[[-480,483,484,485,486]]],\"id\":\"300\",\"properties\":{\"name\":\"Greece\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-359,-425,487,488,-427,-418]],[[-479,489,-484]]],\"id\":\"792\",\"properties\":{\"name\":\"Turkey\"}},{\"type\":\"Polygon\",\"arcs\":[[-486,490,491,492,493]],\"id\":\"008\",\"properties\":{\"name\":\"Albania\"}},{\"type\":\"Polygon\",\"arcs\":[[-458,494,495,496,497,498]],\"id\":\"191\",\"properties\":{\"name\":\"Croatia\"}},{\"type\":\"Polygon\",\"arcs\":[[-452,499,-239,-471]],\"id\":\"756\",\"properties\":{\"name\":\"Switzerland\"}},{\"type\":\"Polygon\",\"arcs\":[[-472,-245,500]],\"id\":\"442\",\"properties\":{\"name\":\"Luxembourg\"}},{\"type\":\"Polygon\",\"arcs\":[[-473,-501,-244,501,502]],\"id\":\"056\",\"properties\":{\"name\":\"Belgium\"}},{\"type\":\"Polygon\",\"arcs\":[[-474,-503,503]],\"id\":\"528\",\"properties\":{\"name\":\"Netherlands\"}},{\"type\":\"Polygon\",\"arcs\":[[504,505]],\"id\":\"620\",\"properties\":{\"name\":\"Portugal\"}},{\"type\":\"Polygon\",\"arcs\":[[-505,506,-242,507]],\"id\":\"724\",\"properties\":{\"name\":\"Spain\"}},{\"type\":\"Polygon\",\"arcs\":[[508,509]],\"id\":\"372\",\"properties\":{\"name\":\"Ireland\"}},{\"type\":\"Polygon\",\"arcs\":[[510]],\"id\":\"540\",\"properties\":{\"name\":\"New Caledonia\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[511]],[[512]],[[513]],[[514]],[[515]]],\"id\":\"090\",\"properties\":{\"name\":\"Solomon Is.\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[516]],[[517]]],\"id\":\"554\",\"properties\":{\"name\":\"New Zealand\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[518]],[[519]]],\"id\":\"036\",\"properties\":{\"name\":\"Australia\"}},{\"type\":\"Polygon\",\"arcs\":[[520]],\"id\":\"144\",\"properties\":{\"name\":\"Sri Lanka\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[521]],[[-61,-150,-393,-148,-391,522,-385,-379,-384,-401,-403,-399,-404,-397,-408,-410,-414,-415]]],\"id\":\"156\",\"properties\":{\"name\":\"China\"}},{\"type\":\"Polygon\",\"arcs\":[[523]],\"id\":\"158\",\"properties\":{\"name\":\"Taiwan\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-451,524,525,-240,-500]],[[526]],[[527]]],\"id\":\"380\",\"properties\":{\"name\":\"Italy\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-476,528]],[[529]]],\"id\":\"208\",\"properties\":{\"name\":\"Denmark\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-510,530]],[[531]]],\"id\":\"826\",\"properties\":{\"name\":\"United Kingdom\"}},{\"type\":\"Polygon\",\"arcs\":[[532]],\"id\":\"352\",\"properties\":{\"name\":\"Iceland\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-152,533,-421,-429,534]],[[-419,-426]]],\"id\":\"031\",\"properties\":{\"name\":\"Azerbaijan\"}},{\"type\":\"Polygon\",\"arcs\":[[-153,-535,-428,-489,535]],\"id\":\"268\",\"properties\":{\"name\":\"Georgia\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[536]],[[537]],[[538]],[[539]],[[540]],[[541]],[[542]]],\"id\":\"608\",\"properties\":{\"name\":\"Philippines\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[-374,543]],[[-81,544,545,546]]],\"id\":\"458\",\"properties\":{\"name\":\"Malaysia\"}},{\"type\":\"Polygon\",\"arcs\":[[-546,547]],\"id\":\"096\",\"properties\":{\"name\":\"Brunei\"}},{\"type\":\"Polygon\",\"arcs\":[[-450,-459,-499,548,-525]],\"id\":\"705\",\"properties\":{\"name\":\"Slovenia\"}},{\"type\":\"Polygon\",\"arcs\":[[-160,549,-430,-171]],\"id\":\"246\",\"properties\":{\"name\":\"Finland\"}},{\"type\":\"Polygon\",\"arcs\":[[-442,-460,-455,550,-444]],\"id\":\"703\",\"properties\":{\"name\":\"Slovakia\"}},{\"type\":\"Polygon\",\"arcs\":[[-445,-551,-454,-470]],\"id\":\"203\",\"properties\":{\"name\":\"Czechia\"}},{\"type\":\"Polygon\",\"arcs\":[[-126,551,552,553]],\"id\":\"232\",\"properties\":{\"name\":\"Eritrea\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[554]],[[555]],[[556]]],\"id\":\"392\",\"properties\":{\"name\":\"Japan\"}},{\"type\":\"Polygon\",\"arcs\":[[-193,-97,-202]],\"id\":\"600\",\"properties\":{\"name\":\"Paraguay\"}},{\"type\":\"Polygon\",\"arcs\":[[-364,557,558]],\"id\":\"887\",\"properties\":{\"name\":\"Yemen\"}},{\"type\":\"Polygon\",\"arcs\":[[-346,-362,-356,559,-354,560,-352,-365,-559,561]],\"id\":\"682\",\"properties\":{\"name\":\"Saudi Arabia\"}},{\"type\":\"MultiPolygon\",\"arcs\":[[[562]],[[563]],[[564]],[[565]],[[566]],[[567]],[[568]],[[569]]],\"id\":\"010\",\"properties\":{\"name\":\"Antarctica\"}},{\"type\":\"Polygon\",\"arcs\":[[570,571]],\"properties\":{\"name\":\"N. Cyprus\"}},{\"type\":\"Polygon\",\"arcs\":[[-572,572]],\"id\":\"196\",\"properties\":{\"name\":\"Cyprus\"}},{\"type\":\"Polygon\",\"arcs\":[[-341,-15,573]],\"id\":\"504\",\"properties\":{\"name\":\"Morocco\"}},{\"type\":\"Polygon\",\"arcs\":[[-124,574,575,-329,576]],\"id\":\"818\",\"properties\":{\"name\":\"Egypt\"}},{\"type\":\"Polygon\",\"arcs\":[[-123,-132,-283,-343,-340,577,-575]],\"id\":\"434\",\"properties\":{\"name\":\"Libya\"}},{\"type\":\"Polygon\",\"arcs\":[[-114,-119,578,-127,-554,579,580]],\"id\":\"231\",\"properties\":{\"name\":\"Ethiopia\"}},{\"type\":\"Polygon\",\"arcs\":[[-553,581,582,-580]],\"id\":\"262\",\"properties\":{\"name\":\"Djibouti\"}},{\"type\":\"Polygon\",\"arcs\":[[-115,-581,-583,583]],\"properties\":{\"name\":\"Somaliland\"}},{\"type\":\"Polygon\",\"arcs\":[[-11,584,-110,585,-117]],\"id\":\"800\",\"properties\":{\"name\":\"Uganda\"}},{\"type\":\"Polygon\",\"arcs\":[[-10,-325,-111,-585]],\"id\":\"646\",\"properties\":{\"name\":\"Rwanda\"}},{\"type\":\"Polygon\",\"arcs\":[[-496,586,587]],\"id\":\"070\",\"properties\":{\"name\":\"Bosnia and Herz.\"}},{\"type\":\"Polygon\",\"arcs\":[[-481,-487,-494,588,589]],\"id\":\"807\",\"properties\":{\"name\":\"Macedonia\"}},{\"type\":\"Polygon\",\"arcs\":[[-457,-464,-482,-590,590,591,-587,-495]],\"id\":\"688\",\"properties\":{\"name\":\"Serbia\"}},{\"type\":\"Polygon\",\"arcs\":[[-492,592,-497,-588,-592,593]],\"id\":\"499\",\"properties\":{\"name\":\"Montenegro\"}},{\"type\":\"Polygon\",\"arcs\":[[-493,-594,-591,-589]],\"properties\":{\"name\":\"Kosovo\"}},{\"type\":\"Polygon\",\"arcs\":[[594]],\"id\":\"780\",\"properties\":{\"name\":\"Trinidad and Tobago\"}},{\"type\":\"Polygon\",\"arcs\":[[-109,-310,-128,-579,-118,-586]],\"id\":\"728\",\"properties\":{\"name\":\"S. Sudan\"}}]},\"land\":{\"type\":\"GeometryCollection\",\"geometries\":[{\"type\":\"MultiPolygon\",\"arcs\":[[[0]],[[1]],[[3,320,184,255,323,104,322,311,313,315,289,284,273,290,293,297,305,307,302,304,263,336,258,272,13,573,341,338,577,575,329,332,423,487,535,153,435,164,436,461,477,489,484,490,592,497,548,525,240,507,505,506,242,501,503,474,528,476,446,142,464,466,468,158,549,430,172,161,387,391,389,522,385,371,372,543,374,380,401,394,404,422,360,354,559,352,560,347,365,349,362,557,561,346,576,124,551,581,583,115,119],[421,416,64,150,533]],[[17,48,186,229,227,223,219,216,213,209,230,232,234,236,200,191,93,100,203,246,207,211,214,217,220,224,228,189,50,15,58]],[[19]],[[20]],[[21]],[[22]],[[23]],[[24]],[[25]],[[26]],[[27]],[[28]],[[29]],[[30]],[[31]],[[32]],[[33]],[[34]],[[35]],[[36]],[[37]],[[38]],[[39]],[[40]],[[41]],[[42]],[[43]],[[44]],[[45]],[[46]],[[47]],[[51]],[[52]],[[53]],[[54]],[[55]],[[56]],[[57]],[[59]],[[70,75]],[[72]],[[73]],[[74]],[[77,177]],[[78]],[[546,79,544,547]],[[81]],[[82]],[[83]],[[84]],[[85]],[[86]],[[87]],[[88]],[[89]],[[90,98]],[[133,134]],[[135]],[[136]],[[137]],[[138]],[[139]],[[140]],[[144]],[[145]],[[162]],[[165]],[[166]],[[167]],[[168]],[[169]],[[173]],[[174]],[[175]],[[176]],[[245]],[[247]],[[248]],[[249]],[[334]],[[366]],[[367]],[[482]],[[508,530]],[[510]],[[511]],[[512]],[[513]],[[514]],[[515]],[[516]],[[517]],[[518]],[[519]],[[520]],[[521]],[[523]],[[526]],[[527]],[[529]],[[531]],[[532]],[[536]],[[537]],[[538]],[[539]],[[540]],[[541]],[[542]],[[554]],[[555]],[[556]],[[562]],[[563]],[[564]],[[565]],[[566]],[[567]],[[568]],[[569]],[[570,572]],[[594]]]}]}}"),
@@ -9562,6 +9533,1291 @@ for (const f of worldCountries.features) {
 function countryName(id) {
 	return COUNTRY_NAMES[id] ?? id;
 }
+function emptyBook() {
+	const next = {};
+	for (const id of Object.keys(COUNTRY_NAMES)) next[id] = 0;
+	return next;
+}
+var useClientsStore = create()(persist((set, get) => ({
+	counts: { ...DEFAULT_COUNTS },
+	selectedId: null,
+	hoveredId: null,
+	importNotice: null,
+	setHovered: (id) => set({ hoveredId: id }),
+	setSelected: (id) => set({
+		selectedId: id,
+		hoveredId: null
+	}),
+	setCount: (id, n) => {
+		const next = Math.max(0, Math.min(99999, Math.round(n)));
+		set({ counts: {
+			...get().counts,
+			[id]: next
+		} });
+	},
+	replaceCounts: (incoming, notice) => {
+		const counts = emptyBook();
+		for (const [id, n] of Object.entries(incoming)) if (id in COUNTRY_NAMES) counts[id] = n;
+		set({
+			counts,
+			selectedId: null,
+			hoveredId: null,
+			importNotice: notice
+		});
+	},
+	clearNotice: () => set({ importNotice: null }),
+	reset: () => set({
+		counts: { ...DEFAULT_COUNTS },
+		selectedId: null,
+		hoveredId: null,
+		importNotice: {
+			ok: true,
+			message: "Restored the sample book."
+		}
+	})
+}), {
+	name: "client-atlas-v1",
+	partialize: (s) => ({ counts: s.counts })
+}));
+/** ISO 3166-1: numeric id (world-atlas), alpha-2, alpha-3. */
+var ISO_ROWS = [
+	[
+		"004",
+		"AF",
+		"AFG"
+	],
+	[
+		"008",
+		"AL",
+		"ALB"
+	],
+	[
+		"010",
+		"AQ",
+		"ATA"
+	],
+	[
+		"012",
+		"DZ",
+		"DZA"
+	],
+	[
+		"024",
+		"AO",
+		"AGO"
+	],
+	[
+		"031",
+		"AZ",
+		"AZE"
+	],
+	[
+		"032",
+		"AR",
+		"ARG"
+	],
+	[
+		"036",
+		"AU",
+		"AUS"
+	],
+	[
+		"040",
+		"AT",
+		"AUT"
+	],
+	[
+		"044",
+		"BS",
+		"BHS"
+	],
+	[
+		"050",
+		"BD",
+		"BGD"
+	],
+	[
+		"051",
+		"AM",
+		"ARM"
+	],
+	[
+		"056",
+		"BE",
+		"BEL"
+	],
+	[
+		"064",
+		"BT",
+		"BTN"
+	],
+	[
+		"068",
+		"BO",
+		"BOL"
+	],
+	[
+		"070",
+		"BA",
+		"BIH"
+	],
+	[
+		"072",
+		"BW",
+		"BWA"
+	],
+	[
+		"076",
+		"BR",
+		"BRA"
+	],
+	[
+		"084",
+		"BZ",
+		"BLZ"
+	],
+	[
+		"090",
+		"SB",
+		"SLB"
+	],
+	[
+		"096",
+		"BN",
+		"BRN"
+	],
+	[
+		"100",
+		"BG",
+		"BGR"
+	],
+	[
+		"104",
+		"MM",
+		"MMR"
+	],
+	[
+		"108",
+		"BI",
+		"BDI"
+	],
+	[
+		"112",
+		"BY",
+		"BLR"
+	],
+	[
+		"116",
+		"KH",
+		"KHM"
+	],
+	[
+		"120",
+		"CM",
+		"CMR"
+	],
+	[
+		"124",
+		"CA",
+		"CAN"
+	],
+	[
+		"140",
+		"CF",
+		"CAF"
+	],
+	[
+		"144",
+		"LK",
+		"LKA"
+	],
+	[
+		"148",
+		"TD",
+		"TCD"
+	],
+	[
+		"152",
+		"CL",
+		"CHL"
+	],
+	[
+		"156",
+		"CN",
+		"CHN"
+	],
+	[
+		"158",
+		"TW",
+		"TWN"
+	],
+	[
+		"170",
+		"CO",
+		"COL"
+	],
+	[
+		"178",
+		"CG",
+		"COG"
+	],
+	[
+		"180",
+		"CD",
+		"COD"
+	],
+	[
+		"188",
+		"CR",
+		"CRI"
+	],
+	[
+		"191",
+		"HR",
+		"HRV"
+	],
+	[
+		"192",
+		"CU",
+		"CUB"
+	],
+	[
+		"196",
+		"CY",
+		"CYP"
+	],
+	[
+		"203",
+		"CZ",
+		"CZE"
+	],
+	[
+		"204",
+		"BJ",
+		"BEN"
+	],
+	[
+		"208",
+		"DK",
+		"DNK"
+	],
+	[
+		"214",
+		"DO",
+		"DOM"
+	],
+	[
+		"218",
+		"EC",
+		"ECU"
+	],
+	[
+		"222",
+		"SV",
+		"SLV"
+	],
+	[
+		"226",
+		"GQ",
+		"GNQ"
+	],
+	[
+		"231",
+		"ET",
+		"ETH"
+	],
+	[
+		"232",
+		"ER",
+		"ERI"
+	],
+	[
+		"233",
+		"EE",
+		"EST"
+	],
+	[
+		"238",
+		"FK",
+		"FLK"
+	],
+	[
+		"242",
+		"FJ",
+		"FJI"
+	],
+	[
+		"246",
+		"FI",
+		"FIN"
+	],
+	[
+		"250",
+		"FR",
+		"FRA"
+	],
+	[
+		"260",
+		"TF",
+		"ATF"
+	],
+	[
+		"262",
+		"DJ",
+		"DJI"
+	],
+	[
+		"266",
+		"GA",
+		"GAB"
+	],
+	[
+		"268",
+		"GE",
+		"GEO"
+	],
+	[
+		"270",
+		"GM",
+		"GMB"
+	],
+	[
+		"275",
+		"PS",
+		"PSE"
+	],
+	[
+		"276",
+		"DE",
+		"DEU"
+	],
+	[
+		"288",
+		"GH",
+		"GHA"
+	],
+	[
+		"300",
+		"GR",
+		"GRC"
+	],
+	[
+		"304",
+		"GL",
+		"GRL"
+	],
+	[
+		"320",
+		"GT",
+		"GTM"
+	],
+	[
+		"324",
+		"GN",
+		"GIN"
+	],
+	[
+		"328",
+		"GY",
+		"GUY"
+	],
+	[
+		"332",
+		"HT",
+		"HTI"
+	],
+	[
+		"340",
+		"HN",
+		"HND"
+	],
+	[
+		"348",
+		"HU",
+		"HUN"
+	],
+	[
+		"352",
+		"IS",
+		"ISL"
+	],
+	[
+		"356",
+		"IN",
+		"IND"
+	],
+	[
+		"360",
+		"ID",
+		"IDN"
+	],
+	[
+		"364",
+		"IR",
+		"IRN"
+	],
+	[
+		"368",
+		"IQ",
+		"IRQ"
+	],
+	[
+		"372",
+		"IE",
+		"IRL"
+	],
+	[
+		"376",
+		"IL",
+		"ISR"
+	],
+	[
+		"380",
+		"IT",
+		"ITA"
+	],
+	[
+		"384",
+		"CI",
+		"CIV"
+	],
+	[
+		"388",
+		"JM",
+		"JAM"
+	],
+	[
+		"392",
+		"JP",
+		"JPN"
+	],
+	[
+		"398",
+		"KZ",
+		"KAZ"
+	],
+	[
+		"400",
+		"JO",
+		"JOR"
+	],
+	[
+		"404",
+		"KE",
+		"KEN"
+	],
+	[
+		"408",
+		"KP",
+		"PRK"
+	],
+	[
+		"410",
+		"KR",
+		"KOR"
+	],
+	[
+		"414",
+		"KW",
+		"KWT"
+	],
+	[
+		"417",
+		"KG",
+		"KGZ"
+	],
+	[
+		"418",
+		"LA",
+		"LAO"
+	],
+	[
+		"422",
+		"LB",
+		"LBN"
+	],
+	[
+		"426",
+		"LS",
+		"LSO"
+	],
+	[
+		"428",
+		"LV",
+		"LVA"
+	],
+	[
+		"430",
+		"LR",
+		"LBR"
+	],
+	[
+		"434",
+		"LY",
+		"LBY"
+	],
+	[
+		"440",
+		"LT",
+		"LTU"
+	],
+	[
+		"442",
+		"LU",
+		"LUX"
+	],
+	[
+		"450",
+		"MG",
+		"MDG"
+	],
+	[
+		"454",
+		"MW",
+		"MWI"
+	],
+	[
+		"458",
+		"MY",
+		"MYS"
+	],
+	[
+		"466",
+		"ML",
+		"MLI"
+	],
+	[
+		"478",
+		"MR",
+		"MRT"
+	],
+	[
+		"484",
+		"MX",
+		"MEX"
+	],
+	[
+		"496",
+		"MN",
+		"MNG"
+	],
+	[
+		"498",
+		"MD",
+		"MDA"
+	],
+	[
+		"499",
+		"ME",
+		"MNE"
+	],
+	[
+		"504",
+		"MA",
+		"MAR"
+	],
+	[
+		"508",
+		"MZ",
+		"MOZ"
+	],
+	[
+		"512",
+		"OM",
+		"OMN"
+	],
+	[
+		"516",
+		"NA",
+		"NAM"
+	],
+	[
+		"524",
+		"NP",
+		"NPL"
+	],
+	[
+		"528",
+		"NL",
+		"NLD"
+	],
+	[
+		"540",
+		"NC",
+		"NCL"
+	],
+	[
+		"548",
+		"VU",
+		"VUT"
+	],
+	[
+		"554",
+		"NZ",
+		"NZL"
+	],
+	[
+		"558",
+		"NI",
+		"NIC"
+	],
+	[
+		"562",
+		"NE",
+		"NER"
+	],
+	[
+		"566",
+		"NG",
+		"NGA"
+	],
+	[
+		"578",
+		"NO",
+		"NOR"
+	],
+	[
+		"586",
+		"PK",
+		"PAK"
+	],
+	[
+		"591",
+		"PA",
+		"PAN"
+	],
+	[
+		"598",
+		"PG",
+		"PNG"
+	],
+	[
+		"600",
+		"PY",
+		"PRY"
+	],
+	[
+		"604",
+		"PE",
+		"PER"
+	],
+	[
+		"608",
+		"PH",
+		"PHL"
+	],
+	[
+		"616",
+		"PL",
+		"POL"
+	],
+	[
+		"620",
+		"PT",
+		"PRT"
+	],
+	[
+		"624",
+		"GW",
+		"GNB"
+	],
+	[
+		"626",
+		"TL",
+		"TLS"
+	],
+	[
+		"630",
+		"PR",
+		"PRI"
+	],
+	[
+		"634",
+		"QA",
+		"QAT"
+	],
+	[
+		"642",
+		"RO",
+		"ROU"
+	],
+	[
+		"643",
+		"RU",
+		"RUS"
+	],
+	[
+		"646",
+		"RW",
+		"RWA"
+	],
+	[
+		"682",
+		"SA",
+		"SAU"
+	],
+	[
+		"686",
+		"SN",
+		"SEN"
+	],
+	[
+		"688",
+		"RS",
+		"SRB"
+	],
+	[
+		"694",
+		"SL",
+		"SLE"
+	],
+	[
+		"702",
+		"SG",
+		"SGP"
+	],
+	[
+		"703",
+		"SK",
+		"SVK"
+	],
+	[
+		"704",
+		"VN",
+		"VNM"
+	],
+	[
+		"705",
+		"SI",
+		"SVN"
+	],
+	[
+		"706",
+		"SO",
+		"SOM"
+	],
+	[
+		"710",
+		"ZA",
+		"ZAF"
+	],
+	[
+		"716",
+		"ZW",
+		"ZWE"
+	],
+	[
+		"724",
+		"ES",
+		"ESP"
+	],
+	[
+		"728",
+		"SS",
+		"SSD"
+	],
+	[
+		"729",
+		"SD",
+		"SDN"
+	],
+	[
+		"732",
+		"EH",
+		"ESH"
+	],
+	[
+		"740",
+		"SR",
+		"SUR"
+	],
+	[
+		"748",
+		"SZ",
+		"SWZ"
+	],
+	[
+		"752",
+		"SE",
+		"SWE"
+	],
+	[
+		"756",
+		"CH",
+		"CHE"
+	],
+	[
+		"760",
+		"SY",
+		"SYR"
+	],
+	[
+		"762",
+		"TJ",
+		"TJK"
+	],
+	[
+		"764",
+		"TH",
+		"THA"
+	],
+	[
+		"768",
+		"TG",
+		"TGO"
+	],
+	[
+		"780",
+		"TT",
+		"TTO"
+	],
+	[
+		"784",
+		"AE",
+		"ARE"
+	],
+	[
+		"788",
+		"TN",
+		"TUN"
+	],
+	[
+		"792",
+		"TR",
+		"TUR"
+	],
+	[
+		"795",
+		"TM",
+		"TKM"
+	],
+	[
+		"800",
+		"UG",
+		"UGA"
+	],
+	[
+		"804",
+		"UA",
+		"UKR"
+	],
+	[
+		"807",
+		"MK",
+		"MKD"
+	],
+	[
+		"818",
+		"EG",
+		"EGY"
+	],
+	[
+		"826",
+		"GB",
+		"GBR"
+	],
+	[
+		"834",
+		"TZ",
+		"TZA"
+	],
+	[
+		"840",
+		"US",
+		"USA"
+	],
+	[
+		"854",
+		"BF",
+		"BFA"
+	],
+	[
+		"858",
+		"UY",
+		"URY"
+	],
+	[
+		"860",
+		"UZ",
+		"UZB"
+	],
+	[
+		"862",
+		"VE",
+		"VEN"
+	],
+	[
+		"887",
+		"YE",
+		"YEM"
+	],
+	[
+		"894",
+		"ZM",
+		"ZMB"
+	]
+];
+var ALIASES = {
+	usa: "840",
+	us: "840",
+	"u s": "840",
+	"u s a": "840",
+	america: "840",
+	"united states of america": "840",
+	"united states": "840",
+	uk: "826",
+	"u k": "826",
+	britain: "826",
+	"great britain": "826",
+	england: "826",
+	"united kingdom": "826",
+	uae: "784",
+	"u a e": "784",
+	"united arab emirates": "784",
+	"south korea": "410",
+	"republic of korea": "410",
+	korea: "410",
+	"north korea": "408",
+	russia: "643",
+	"russian federation": "643",
+	vietnam: "704",
+	"viet nam": "704",
+	"czech republic": "203",
+	czechia: "203",
+	"ivory coast": "384",
+	"cote d ivoire": "384",
+	"cote divoire": "384",
+	swaziland: "748",
+	eswatini: "748",
+	burma: "104",
+	myanmar: "104",
+	"east timor": "626",
+	"timor leste": "626",
+	palestine: "275",
+	taiwan: "158",
+	macedonia: "807",
+	"north macedonia": "807",
+	"congo": "178",
+	"republic of the congo": "178",
+	"democratic republic of the congo": "180",
+	"democratic republic of congo": "180",
+	drc: "180",
+	"dr congo": "180",
+	"congo kinshasa": "180",
+	"congo brazzaville": "178",
+	"bosnia": "070",
+	"bosnia herzegovina": "070",
+	"hong kong": "156",
+	"south africa": "710",
+	"new zealand": "554",
+	"saudi arabia": "682",
+	"sri lanka": "144",
+	"el salvador": "222",
+	"costa rica": "188",
+	"dominican republic": "214",
+	"papua new guinea": "598",
+	"south sudan": "728",
+	"equatorial guinea": "226",
+	"central african republic": "140",
+	"car": "140",
+	"trinidad and tobago": "780",
+	"trinidad": "780",
+	"uae emirates": "784",
+	paksitan: "586",
+	pakistan: "586",
+	india: "356"
+};
+function normalizeCountryKey(value) {
+	return value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+}
+var NAME_TO_ID = {};
+for (const [id, name] of Object.entries(COUNTRY_NAMES)) {
+	NAME_TO_ID[normalizeCountryKey(name)] = id;
+	NAME_TO_ID[id] = id;
+}
+for (const [id, iso2, iso3] of ISO_ROWS) {
+	NAME_TO_ID[id] = id;
+	NAME_TO_ID[iso2.toLowerCase()] = id;
+	NAME_TO_ID[iso3.toLowerCase()] = id;
+}
+for (const [alias, id] of Object.entries(ALIASES)) NAME_TO_ID[alias] = id;
+function resolveCountryId(raw) {
+	const trimmed = raw.trim();
+	if (!trimmed) return null;
+	if (/^\d{1,3}$/.test(trimmed)) {
+		const id = trimmed.padStart(3, "0");
+		return COUNTRY_NAMES[id] ? id : NAME_TO_ID[id] ?? null;
+	}
+	const id = NAME_TO_ID[normalizeCountryKey(trimmed)];
+	if (id && COUNTRY_NAMES[id]) return id;
+	if (id) return id;
+	return null;
+}
+var NAME_HEADERS = /* @__PURE__ */ new Set([
+	"country",
+	"nation",
+	"name",
+	"location",
+	"iso",
+	"code",
+	"iso2",
+	"iso3"
+]);
+var COUNT_HEADERS = /* @__PURE__ */ new Set([
+	"clients",
+	"client",
+	"count",
+	"total",
+	"value",
+	"n",
+	"number",
+	"qty",
+	"quantity"
+]);
+function splitCsvLine(line, delimiter) {
+	const out = [];
+	let cur = "";
+	let quoted = false;
+	for (let i = 0; i < line.length; i++) {
+		const ch = line[i];
+		if (quoted) {
+			if (ch === "\"") {
+				if (line[i + 1] === "\"") {
+					cur += "\"";
+					i += 1;
+				} else quoted = false;
+			} else cur += ch;
+		} else if (ch === "\"") quoted = true;
+		else if (ch === delimiter) {
+			out.push(cur.trim());
+			cur = "";
+		} else cur += ch;
+	}
+	out.push(cur.trim());
+	return out;
+}
+function detectDelimiter(text) {
+	const sample = text.split(/\r?\n/).slice(0, 8).join("\n");
+	const commas = (sample.match(/,/g) ?? []).length;
+	const tabs = (sample.match(/\t/g) ?? []).length;
+	const semis = (sample.match(/;/g) ?? []).length;
+	if (tabs > commas && tabs >= semis) return "	";
+	if (semis > commas) return ";";
+	return ",";
+}
+function parseNumber(raw) {
+	const cleaned = raw.replace(/[%\s]/g, "").replace(/,/g, "");
+	if (!cleaned) return null;
+	const n = Number(cleaned);
+	if (!Number.isFinite(n) || n < 0) return null;
+	return Math.min(99999, Math.round(n));
+}
+function looksLikeHeader(cells) {
+	const a = cells[0]?.toLowerCase() ?? "";
+	const b = cells[1]?.toLowerCase() ?? "";
+	if (NAME_HEADERS.has(a)) return true;
+	if (COUNT_HEADERS.has(b)) return true;
+	if (COUNT_HEADERS.has(a) && NAME_HEADERS.has(b)) return true;
+	return false;
+}
+function parseClientsCsv(text) {
+	const source = text.replace(/^\uFEFF/, "").trim();
+	if (!source) return {
+		counts: {},
+		matched: 0,
+		unmatched: [],
+		error: "The file is empty."
+	};
+	const delimiter = detectDelimiter(source);
+	const lines = source.split(/\r?\n/).filter((line) => line.trim().length > 0);
+	if (lines.length === 0) return {
+		counts: {},
+		matched: 0,
+		unmatched: [],
+		error: "The file is empty."
+	};
+	let start = 0;
+	let nameIdx = 0;
+	let countIdx = 1;
+	const first = splitCsvLine(lines[0] ?? "", delimiter);
+	if (first.length < 2) return {
+		counts: {},
+		matched: 0,
+		unmatched: [],
+		error: "Need two columns: country and clients."
+	};
+	if (looksLikeHeader(first)) {
+		start = 1;
+		const lower = first.map((c) => c.toLowerCase());
+		const ni = lower.findIndex((c) => NAME_HEADERS.has(c));
+		const ci = lower.findIndex((c) => COUNT_HEADERS.has(c));
+		if (ni >= 0) nameIdx = ni;
+		if (ci >= 0) countIdx = ci;
+		if (ni >= 0 && ci < 0) countIdx = ni === 0 ? 1 : 0;
+		if (ci >= 0 && ni < 0) nameIdx = ci === 0 ? 1 : 0;
+	}
+	const counts = {};
+	const unmatched = [];
+	let matched = 0;
+	for (let i = start; i < lines.length; i++) {
+		const cells = splitCsvLine(lines[i] ?? "", delimiter);
+		const name = cells[nameIdx] ?? "";
+		const rawCount = cells[countIdx] ?? "";
+		if (!name) continue;
+		const n = parseNumber(rawCount);
+		if (n === null) {
+			unmatched.push(name);
+			continue;
+		}
+		const id = resolveCountryId(name);
+		if (!id || !COUNTRY_NAMES[id]) {
+			unmatched.push(name);
+			continue;
+		}
+		counts[id] = (counts[id] ?? 0) + n;
+		matched += 1;
+	}
+	if (matched === 0) return {
+		counts: {},
+		matched: 0,
+		unmatched,
+		error: unmatched.length ? "No rows matched a country. Use names, ISO codes, or download the template." : "No client rows found."
+	};
+	return {
+		counts,
+		matched,
+		unmatched
+	};
+}
+var CSV_TEMPLATE = `country,clients
+United States,100
+United Kingdom,48
+Germany,36
+India,3
+Pakistan,2
+`;
+var MAX_BYTES = 524288;
+function applyCsvText(text) {
+	const result = parseClientsCsv(text);
+	if (result.error) {
+		useClientsStore.setState({ importNotice: {
+			ok: false,
+			message: result.error
+		} });
+		return;
+	}
+	const extra = result.unmatched.length > 0 ? ` · ${result.unmatched.length} unmatched (${result.unmatched.slice(0, 3).join(", ")}${result.unmatched.length > 3 ? "…" : ""})` : "";
+	useClientsStore.getState().replaceCounts(result.counts, {
+		ok: true,
+		message: `Loaded ${result.matched} rows${extra}`
+	});
+}
+function CsvUpload({ className }) {
+	const inputRef = (0, import_react.useRef)(null);
+	const onFile = async (file) => {
+		if (!file) return;
+		if (file.size > MAX_BYTES) {
+			useClientsStore.setState({ importNotice: {
+				ok: false,
+				message: "File is too large (512 KB max)."
+			} });
+			return;
+		}
+		applyCsvText(await file.text());
+	};
+	const downloadTemplate = () => {
+		const blob = new Blob([CSV_TEMPLATE], { type: "text/csv;charset=utf-8" });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement("a");
+		a.href = url;
+		a.download = "clients-template.csv";
+		a.click();
+		URL.revokeObjectURL(url);
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: cn("flex flex-col gap-2", className),
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+			ref: inputRef,
+			id: "csv-upload-rail",
+			type: "file",
+			accept: ".csv,text/csv,text/tab-separated-values,.tsv",
+			className: "sr-only",
+			"aria-label": "Clients CSV file",
+			onChange: (e) => {
+				const file = e.target.files?.[0];
+				onFile(file);
+				e.target.value = "";
+			}
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex gap-2",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+				type: "button",
+				variant: "outline",
+				size: "sm",
+				className: "flex-1",
+				onClick: () => inputRef.current?.click(),
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Upload, {}), "Upload CSV"]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+				type: "button",
+				variant: "ghost",
+				size: "sm",
+				onClick: downloadTemplate,
+				"aria-label": "Download CSV template",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, {}), "Template"]
+			})]
+		})]
+	});
+}
+function HeaderCsvButton() {
+	const inputRef = (0, import_react.useRef)(null);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+		ref: inputRef,
+		id: "csv-upload-header",
+		type: "file",
+		accept: ".csv,text/csv,text/tab-separated-values,.tsv",
+		className: "sr-only",
+		"aria-label": "Upload clients CSV",
+		onChange: (e) => {
+			const file = e.target.files?.[0];
+			if (!file) return;
+			if (file.size > MAX_BYTES) {
+				useClientsStore.setState({ importNotice: {
+					ok: false,
+					message: "File is too large (512 KB max)."
+				} });
+				e.target.value = "";
+				return;
+			}
+			file.text().then(applyCsvText);
+			e.target.value = "";
+		}
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+		type: "button",
+		variant: "outline",
+		size: "sm",
+		onClick: () => inputRef.current?.click(),
+		"aria-label": "Upload clients CSV",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Upload, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "hidden sm:inline",
+				children: "Upload CSV"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "sm:hidden",
+				children: "CSV"
+			})
+		]
+	})] });
+}
+function Input({ className, type, ...props }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+		type,
+		"data-slot": "input",
+		className: cn("h-11 w-full min-w-0 rounded-md bg-surface-2 px-3 text-sm text-fg outline-none", "shadow-[var(--shadow-border)] placeholder:text-subtle", "focus-visible:ring-2 focus-visible:ring-ring/70 focus-visible:ring-offset-2 focus-visible:ring-offset-bg", "disabled:cursor-not-allowed disabled:opacity-40", className),
+		...props
+	});
+}
 function CountryRail({ className }) {
 	const counts = useClientsStore((s) => s.counts);
 	const selectedId = useClientsStore((s) => s.selectedId);
@@ -9646,53 +10902,57 @@ function CountryRail({ className }) {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "border-t border-border px-5 py-4",
-				children: [selectedId ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "font-display text-xl leading-tight text-fg",
-						children: countryName(selectedId)
+				children: [
+					selectedId ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "font-display text-xl leading-tight text-fg",
+							children: countryName(selectedId)
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-1 text-sm text-muted",
+							children: clientLabel(selectedCount)
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "mt-3 flex items-center gap-2",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									variant: "outline",
+									size: "icon-sm",
+									"aria-label": "Decrease clients",
+									onClick: () => setCount(selectedId, selectedCount - 1),
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Minus, {})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+									type: "number",
+									min: 0,
+									max: 99999,
+									value: selectedCount,
+									onChange: (e) => setCount(selectedId, Number(e.target.value) || 0),
+									className: "text-center font-mono tabular-nums",
+									"aria-label": "Client count"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									variant: "outline",
+									size: "icon-sm",
+									"aria-label": "Increase clients",
+									onClick: () => setCount(selectedId, selectedCount + 1),
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, {})
+								})
+							]
+						})
+					] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-sm text-muted",
+						children: "Select a country to edit its count."
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-1 text-sm text-muted",
-						children: clientLabel(selectedCount)
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mt-3 flex items-center gap-2",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-								variant: "outline",
-								size: "icon-sm",
-								"aria-label": "Decrease clients",
-								onClick: () => setCount(selectedId, selectedCount - 1),
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Minus, {})
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-								type: "number",
-								min: 0,
-								max: 99999,
-								value: selectedCount,
-								onChange: (e) => setCount(selectedId, Number(e.target.value) || 0),
-								className: "text-center font-mono tabular-nums",
-								"aria-label": "Client count"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-								variant: "outline",
-								size: "icon-sm",
-								"aria-label": "Increase clients",
-								onClick: () => setCount(selectedId, selectedCount + 1),
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, {})
-							})
-						]
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CsvUpload, { className: "mt-3" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+						variant: "ghost",
+						size: "sm",
+						className: "mt-2 w-full",
+						onClick: reset,
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCcw, {}), "Reset counts"]
 					})
-				] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-sm text-muted",
-					children: "Select a country to edit its count."
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-					variant: "ghost",
-					size: "sm",
-					className: "mt-3 w-full",
-					onClick: reset,
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCcw, {}), "Reset counts"]
-				})]
+				]
 			})
 		]
 	});
@@ -10031,6 +11291,7 @@ function DottedMap() {
 }
 function AtlasApp() {
 	const counts = useClientsStore((s) => s.counts);
+	const notice = useClientsStore((s) => s.importNotice);
 	const [open, setOpen] = (0, import_react.useState)(false);
 	const total = sumCounts(counts);
 	const active = countriesWithClients(counts);
@@ -10053,23 +11314,32 @@ function AtlasApp() {
 					})] })]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex items-center gap-2 atlas-in atlas-in-delay-1",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-						className: "hidden font-mono text-xs tabular-nums text-muted md:block",
-						children: [
-							formatCount(total),
-							" clients · ",
-							formatCount(active),
-							" countries"
-						]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-						variant: "outline",
-						size: "sm",
-						className: "lg:hidden",
-						onClick: () => setOpen(true),
-						"aria-label": "Open country list",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(List, {}), "Countries"]
-					})]
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+							className: "hidden font-mono text-xs tabular-nums text-muted md:block",
+							children: [
+								formatCount(total),
+								" clients · ",
+								formatCount(active),
+								" countries"
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeaderCsvButton, {}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+							variant: "outline",
+							size: "sm",
+							className: "lg:hidden",
+							onClick: () => setOpen(true),
+							"aria-label": "Open country list",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(List, {}), "Countries"]
+						})
+					]
 				})]
+			}),
+			notice && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				role: "status",
+				className: `shrink-0 px-4 pb-2 text-xs sm:px-6 ${notice.ok ? "text-muted" : "text-fg"}`,
+				children: notice.message
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "relative flex min-h-0 flex-1 flex-col lg:flex-row",

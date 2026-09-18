@@ -1,5 +1,6 @@
 import { Minus, Plus, RotateCcw, Search } from "lucide-react";
 import { useMemo, useState } from "react";
+import { CsvUpload } from "@/components/csv-upload";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useClientsStore } from "@/lib/clients-store";
@@ -132,7 +133,8 @@ export function CountryRail({ className }: { className?: string }) {
         ) : (
           <p className="text-sm text-muted">Select a country to edit its count.</p>
         )}
-        <Button variant="ghost" size="sm" className="mt-3 w-full" onClick={reset}>
+        <CsvUpload className="mt-3" />
+        <Button variant="ghost" size="sm" className="mt-2 w-full" onClick={reset}>
           <RotateCcw />
           Reset counts
         </Button>

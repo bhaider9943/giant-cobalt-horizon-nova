@@ -1,6 +1,7 @@
 import { Globe2, List, X } from "lucide-react";
 import { useState } from "react";
 import { CountryRail } from "@/components/country-rail";
+import { HeaderCsvButton } from "@/components/csv-upload";
 import { DottedMap } from "@/components/dotted-map";
 import { Button } from "@/components/ui/button";
 import { useClientsStore } from "@/lib/clients-store";
@@ -9,6 +10,7 @@ import { formatCount } from "@/lib/utils";
 
 export function AtlasApp() {
   const counts = useClientsStore((s) => s.counts);
+  const notice = useClientsStore((s) => s.importNotice);
   const [open, setOpen] = useState(false);
   const total = sumCounts(counts);
   const active = countriesWithClients(counts);
@@ -31,6 +33,7 @@ export function AtlasApp() {
           <p className="hidden font-mono text-xs tabular-nums text-muted md:block">
             {formatCount(total)} clients · {formatCount(active)} countries
           </p>
+          <HeaderCsvButton />
           <Button
             variant="outline"
             size="sm"
@@ -43,6 +46,14 @@ export function AtlasApp() {
           </Button>
         </div>
       </header>
+      {notice && (
+        <p
+          role="status"
+          className={`shrink-0 px-4 pb-2 text-xs sm:px-6 ${notice.ok ? "text-muted" : "text-fg"}`}
+        >
+          {notice.message}
+        </p>
+      )}
 
       <div className="relative flex min-h-0 flex-1 flex-col lg:flex-row">
         <main className="relative min-h-0 flex-1">
